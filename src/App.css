@@ -1,0 +1,713 @@
+.app-shell {
+	min-height: 100vh;
+	background: #0e0f12;
+}
+
+.app-header {
+	display: flex;
+	height: auto;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 16px;
+	padding: 24px 32px;
+	background: rgba(14, 15, 18, 0.92);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+	line-height: 1.3;
+}
+
+.app-header__eyebrow {
+	display: block;
+	margin-bottom: 8px;
+	color: rgba(255, 255, 255, 0.58);
+	text-transform: uppercase;
+	letter-spacing: 0.18em;
+	font-size: 12px;
+}
+
+.app-header__title {
+	margin: 0 !important;
+	color: #f3f5f7 !important;
+}
+
+.app-header__tag {
+	margin-inline-end: 0 !important;
+}
+
+.app-content {
+	padding: 24px 32px 32px;
+}
+
+.sidebar-stack,
+.main-stack {
+	width: 100%;
+}
+
+.hero-card,
+.sidebar-card,
+.tree-card,
+.summary-card {
+	border: 1px solid rgba(255, 255, 255, 0.06);
+	background: rgba(21, 23, 28, 0.9);
+	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.22);
+}
+
+.hero-card .ant-card-body,
+.sidebar-card .ant-card-body,
+.tree-card .ant-card-body,
+.summary-card .ant-card-body {
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-card__icon {
+	color: #ff4d7d;
+	font-size: 18px;
+}
+
+.summary-grid {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.summary-card .ant-card-body {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.summary-card__helper {
+	color: rgba(255, 255, 255, 0.58);
+}
+
+.summary-card--list .ant-card-head {
+	border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+.summary-meta {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	flex-wrap: wrap;
+}
+
+.summary-meta__text {
+	color: rgba(255, 255, 255, 0.72);
+}
+
+.loader-card__content,
+.filters-card__content {
+	width: 100%;
+}
+
+.loader-card__label,
+.filters-label {
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+}
+
+.loader-card__text,
+.filters-help {
+	margin-bottom: 0 !important;
+	color: rgba(255, 255, 255, 0.62);
+}
+
+.filters-card__content .ant-checkbox-wrapper {
+	margin-inline-start: 0;
+	margin-inline-end: 16px;
+	margin-block: 8px 0;
+	color: rgba(255, 255, 255, 0.82);
+}
+
+.filters-switch-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+}
+
+.edge-list {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.edge-row {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.edge-arrow {
+	color: rgba(255, 255, 255, 0.45);
+}
+
+.project-tree-graph {
+	min-height: 440px;
+	overflow: auto;
+	padding: 8px 4px;
+}
+
+.tree-caption,
+.graph-caption {
+	display: inline-block;
+	margin-bottom: 12px;
+	color: rgba(255, 255, 255, 0.56);
+	font-size: 13px;
+}
+
+.tree-node {
+	display: inline-flex;
+	flex-direction: column;
+	gap: 6px;
+	padding: 4px 0;
+}
+
+.tree-node__name {
+	font-weight: 500;
+}
+
+.tree-node__meta {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	flex-wrap: wrap;
+}
+
+.tree-title {
+	color: rgba(255, 255, 255, 0.88);
+}
+
+.tree-title--match {
+	color: #ff4d7d;
+	font-weight: 600;
+}
+
+.project-graph {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.graph-scroll {
+	overflow: auto;
+	border: 1px solid rgba(255, 255, 255, 0.06);
+	border-radius: 16px;
+	background: #101217;
+}
+
+.graph-canvas {
+	position: relative;
+	min-height: 480px;
+}
+
+.graph-canvas__edges {
+	position: absolute;
+	inset: 0;
+	color: rgba(255, 255, 255, 0.26);
+}
+
+.graph-edge {
+	fill: none;
+	stroke-width: 1.5;
+}
+
+.graph-edge--active {
+	opacity: 0.85;
+}
+
+.graph-edge--dimmed {
+	opacity: 0.18;
+}
+
+.graph-edge--violation {
+	stroke: #ff4d7d;
+	color: #ff4d7d;
+	stroke-width: 2;
+}
+
+.graph-column-label {
+	position: absolute;
+	top: 18px;
+	transform: translateX(-50%);
+	z-index: 2;
+}
+
+.graph-node {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 180px;
+	padding: 12px;
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	border-radius: 14px;
+	background: #151922;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+	color: rgba(255, 255, 255, 0.92);
+	text-align: left;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+	transition: border-color 120ms ease, transform 120ms ease, box-shadow 120ms ease;
+}
+
+.graph-node:hover {
+	border-color: rgba(255, 77, 125, 0.5);
+	box-shadow: 0 12px 34px rgba(0, 0, 0, 0.26);
+	transform: translate(-50%, -50%) translateY(-2px);
+}
+
+.graph-node--app {
+	border-color: rgba(255, 77, 125, 0.22);
+}
+
+.graph-node__title {
+	display: block;
+	font-weight: 600;
+	margin-bottom: 6px;
+	word-break: break-word;
+}
+
+.graph-node__path {
+	display: block;
+	margin-bottom: 8px;
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 12px;
+	word-break: break-word;
+}
+
+.graph-node__tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+.explorer-error {
+	padding: 8px 12px;
+	border-radius: 10px;
+}
+
+@media (max-width: 1199px) {
+	.app-header,
+	.app-content {
+		padding-inline: 20px;
+	}
+
+	.graph-node {
+		width: 172px;
+	}
+}
+
+@media (max-width: 767px) {
+	.app-header {
+		flex-direction: column;
+	}
+
+	.app-header__title {
+		font-size: 24px !important;
+	}
+
+	.app-content {
+		padding: 16px;
+	}
+
+	.graph-node {
+		width: 160px;
+	}
+}
+
+/* React Flow Styles */
+.reactflow {
+	background: #0a0c0f !important;
+}
+
+.reactflow__minimap {
+	background: rgba(21, 23, 28, 0.8) !important;
+	border-radius: 8px;
+	border: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+.reactflow-attribution {
+	background: transparent !important;
+}
+
+.reactflow__controls {
+	background: transparent !important;
+	border: none !important;
+	gap: 8px;
+}
+
+.reactflow__controls button {
+	background: rgba(21, 23, 28, 0.9) !important;
+	border: 1px solid rgba(255, 255, 255, 0.08) !important;
+	border-radius: 8px;
+	color: rgba(255, 255, 255, 0.8) !important;
+	width: 36px;
+	height: 36px;
+	font-size: 14px;
+}
+
+.reactflow__controls button:hover {
+	background: rgba(24, 26, 32, 0.95) !important;
+	border-color: rgba(255, 77, 125, 0.3) !important;
+}
+
+.reactflow-node {
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	border-radius: 12px;
+	background: #151922;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+	color: rgba(255, 255, 255, 0.9);
+	padding: 12px;
+	font-size: 13px;
+	min-width: 160px;
+	max-width: 220px;
+	text-align: left;
+	transition: all 200ms ease;
+}
+
+.reactflow-node:hover {
+	border-color: rgba(255, 77, 125, 0.4);
+	box-shadow: 0 12px 32px rgba(255, 77, 125, 0.15);
+	background: rgba(21, 23, 28, 0.95);
+}
+
+.reactflow-node__label {
+	font-weight: 600;
+	margin-bottom: 6px;
+	word-break: break-word;
+	color: #f3f5f7;
+}
+
+.reactflow-edge {
+	stroke: rgba(255, 255, 255, 0.18) !important;
+	stroke-width: 1.5;
+}
+
+.reactflow-edge.animated {
+	stroke: #ff4d7d !important;
+	stroke-width: 2;
+	stroke-dasharray: 5, 5;
+	animation: flow 20s infinite;
+}
+
+@keyframes flow {
+	0% {
+		stroke-dashoffset: 0;
+	}
+	100% {
+		stroke-dashoffset: 10;
+	}
+}
+
+.graph-node-content {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	align-items: flex-start;
+	width: 100%;
+}
+
+.graph-node-title {
+	font-weight: 600;
+	color: #f3f5f7;
+	word-break: break-word;
+	font-size: 12px;
+	line-height: 1.2;
+	max-width: 150px;
+}
+
+.graph-node-meta {
+	display: flex;
+	gap: 6px;
+	flex-wrap: wrap;
+	font-size: 10px;
+	width: 100%;
+	align-items: center;
+}
+
+.graph-node-layer {
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 9px;
+	letter-spacing: 0.08em;
+}
+
+.graph-node-type {
+	padding: 2px 6px;
+	background: rgba(255, 255, 255, 0.08);
+	border-radius: 3px;
+	color: rgba(255, 255, 255, 0.65);
+	font-size: 9px;
+	text-transform: capitalize;
+}
+
+.graph-node-path {
+	font-size: 10px;
+	line-height: 1.25;
+	color: rgba(255, 255, 255, 0.42);
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.graph-node-imports {
+	margin-left: auto;
+	font-size: 9px;
+	font-weight: 600;
+	color: rgba(125, 200, 255, 0.9);
+	letter-spacing: 0.04em;
+}
+
+.graph-hint-panel {
+	max-width: 240px;
+	padding: 8px 10px;
+	border-radius: 8px;
+	background: rgba(14, 15, 18, 0.82);
+	border: 1px solid rgba(255, 255, 255, 0.07);
+	line-height: 1.35;
+}
+
+.graph-minimap {
+	border-radius: 10px;
+}
+
+.tree-node__import-badge .ant-badge-count {
+	min-width: 18px;
+	height: 18px;
+	line-height: 18px;
+	font-size: 11px;
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35);
+}
+
+.file-imports-drawer .ant-drawer-header {
+	border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.file-imports-drawer .ant-drawer-title {
+	color: #f3f5f7;
+}
+
+.file-imports-drawer .ant-drawer-body {
+	background: #12141a;
+}
+
+.file-imports-drawer__spec {
+	font-size: 12px !important;
+	word-break: break-all;
+	white-space: pre-wrap;
+	color: rgba(255, 255, 255, 0.88) !important;
+	background: rgba(255, 255, 255, 0.06) !important;
+	border: 1px solid rgba(255, 255, 255, 0.06) !important;
+	padding: 4px 8px !important;
+	border-radius: 6px;
+}
+
+.file-imports-drawer__row {
+	border-block-end: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+.file-imports-drawer__link {
+	font-size: 13px;
+}
+
+.fsd-warnings-panel--empty {
+	margin-block: 24px;
+}
+
+.fsd-warnings-panel__row {
+	border-block-end: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+.fsd-warnings-panel__title {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+}
+
+.fsd-warnings-panel__desc {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	margin-top: 4px;
+}
+
+.fsd-warnings-panel__importer {
+	font-size: 12px;
+	word-break: break-all;
+}
+
+.fsd-warnings-panel__detail {
+	font-size: 12px;
+	color: rgba(255, 255, 255, 0.45);
+}
+
+.fsd-warnings-collapse.ant-collapse-ghost > .ant-collapse-item {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+	margin-bottom: 4px;
+}
+
+.fsd-warnings-collapse .ant-collapse-header {
+	align-items: flex-start !important;
+	padding: 12px 8px !important;
+}
+
+.fsd-warnings-collapse .ant-collapse-content-box {
+	padding: 0 8px 16px !important;
+}
+
+.fsd-warnings-panel__collapse-label {
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+.fsd-warnings-panel__path-inline {
+	word-break: break-all;
+}
+
+.fsd-warnings-panel__body {
+	padding-top: 4px;
+}
+
+.fsd-warnings-panel__code-wrap {
+	margin-top: 14px;
+	border-radius: 10px;
+	overflow: hidden;
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	background: rgba(0, 0, 0, 0.35);
+}
+
+.fsd-warnings-panel__code-toolbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	flex-wrap: wrap;
+	padding: 8px 12px;
+	background: rgba(255, 77, 125, 0.07);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.fsd-warnings-panel__code-badge {
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: #ff9fb8;
+}
+
+.fsd-warnings-panel__code-hint {
+	font-size: 11px;
+}
+
+.fsd-warnings-panel__code {
+	margin: 0;
+	padding: 12px 14px;
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+	font-size: 12px;
+	line-height: 1.45;
+	color: rgba(255, 245, 250, 0.92);
+	overflow-x: auto;
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.fsd-warnings-panel__code-missing,
+.fsd-warnings-panel__hint-slice {
+	margin-top: 12px;
+	padding: 10px 12px;
+	border-radius: 8px;
+	background: rgba(255, 255, 255, 0.03);
+	border: 1px dashed rgba(255, 255, 255, 0.08);
+}
+
+.fsd-warnings-panel__meta-line {
+	display: block;
+	font-size: 12px;
+	margin-top: 6px;
+	word-break: break-all;
+}
+
+.fsd-warnings-panel__detail-block {
+	display: block;
+	font-size: 12px;
+	margin-top: 8px;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.project-graph {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.graph-caption {
+	display: block;
+	margin-bottom: 8px;
+}
+
+.graph-layer-legend {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	padding: 16px;
+	background: rgba(21, 23, 28, 0.6);
+	border: 1px solid rgba(255, 255, 255, 0.06);
+	border-radius: 12px;
+	min-width: 200px;
+	max-height: 1200px;
+	overflow-y: auto;
+	flex-shrink: 0;
+}
+
+.graph-layer-item {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	padding: 8px 12px;
+	border-left: 3px solid #888;
+	background: rgba(255, 255, 255, 0.03);
+	border-radius: 6px;
+	cursor: default;
+	transition: all 150ms ease;
+}
+
+.graph-layer-item:hover {
+	background: rgba(255, 255, 255, 0.08);
+	transform: translateX(2px);
+}
+
+.graph-layer-name {
+	font-weight: 600;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: #f3f5f7;
+}
+
+.graph-layer-count {
+	font-size: 11px;
+	color: rgba(255, 255, 255, 0.56);
+}
+
+.graph-canvas-container {
+	flex: 1;
+	display: flex;
+	position: relative;
+	min-height: 700px;
+	background: rgba(21, 23, 28, 0.4);
+	border: 1px solid rgba(255, 255, 255, 0.06);
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.reactflow {
+	background: #0e0f12 !important;
+}
+

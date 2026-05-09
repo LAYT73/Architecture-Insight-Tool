@@ -10,8 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^19.2.5",
-    "react-dom": "^19.2.5"
+    "@ant-design/icons": "^6.2.2",
+    "antd": "^6.3.7",
+    "axios": "^1.4.0",
+    "clsx": "^1.2.1",    "dagre": "^0.8.5",    "react": "^19.2.5",
+    "react-d3-tree": "^3.2.2",
+    "react-dom": "^19.2.5",
+    "reactflow": "^11.8.5"
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",

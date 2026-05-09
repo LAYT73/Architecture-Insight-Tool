@@ -1,0 +1,30 @@
+{
+  "name": "architecture-insight-tool",
+  "children": [
+    {
+      "name": "src",
+      "children": [
+        { "name": "App.tsx" },
+        { "name": "main.tsx" },
+        {
+          "name": "core",
+          "children": [
+            { "name": "file" },
+            { "name": "hooks" }
+          ]
+        },
+        {
+          "name": "ui",
+          "children": [
+            { "name": "components" },
+            { "name": "pages" },
+            { "name": "widgets" }
+          ]
+        }
+      ]
+    },
+    { "name": "public" },
+    { "name": "package.json" },
+    { "name": "vite.config.ts" }
+  ]
+}

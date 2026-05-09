@@ -3,12 +3,25 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: rgba(255, 255, 255, 0.92);
+  background: #0e0f12;
 }
 
-#root {
+* {
   box-sizing: border-box;
 }
 
-body {
+html,
+body,
+#root {
+  min-height: 100%;
   margin: 0;
+}
+
+body {
+  background: #0e0f12;
+}
+
+a {
+  color: inherit;
 }
